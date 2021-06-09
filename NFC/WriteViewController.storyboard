@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NmB-bB-HhG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansJP-Bold.otf">
+            <string>NotoSansJP-Bold</string>
+        </array>
+        <array key="NotoSansJP-Medium.otf">
+            <string>NotoSansJP-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--書き込み-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="WriteViewController" customModule="NFC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FJ4-SM-65E">
+                                <rect key="frame" x="40" y="168" width="334" height="211"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jpN-nq-0HF">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="31"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-pm-RtK">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="25"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBr-Vi-9uy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="18Q-kr-ZT9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP" pointSize="20"/>
+                                                        <color key="textColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lce-wf-O88">
+                                                        <rect key="frame" x="88" y="0.0" width="246" height="25"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="eti-xH-J5W"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8s-BB-1oj">
+                                                <rect key="frame" x="0.0" y="30" width="334" height="1"/>
+                                                <color key="backgroundColor" name="blue4044FC"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Cxk-UI-I9h"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="8QN-TW-daD">
+                                        <rect key="frame" x="0.0" y="71" width="334" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyH-Pj-izB">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP" pointSize="20"/>
+                                                <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="6W1-K7-oDA">
+                                                <rect key="frame" x="234" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="8du-ph-xQV"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="ja_JP"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="8kx-md-DFf"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="8hW-9l-BIR">
+                                        <rect key="frame" x="0.0" y="161" width="334" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="賞味期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDe-Eb-Za8">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP" pointSize="20"/>
+                                                <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="oQe-8c-Pur">
+                                                <rect key="frame" x="234" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="NLL-m2-iSt"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="ja_JP"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="TbB-L4-eaA"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cXt-CF-W9Q">
+                                <rect key="frame" x="40" y="399" width="334" height="120"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="DAg-Fd-bvY"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Xa-rqd">
+                                <rect key="frame" x="40" y="543" width="334" height="56"/>
+                                <color key="backgroundColor" red="0.25098040699958801" green="0.26666668057441711" blue="0.9882352352142334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dhe-1t-KHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP" pointSize="16"/>
+                                <state key="normal" title="書き込む">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cXt-CF-W9Q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="AN3-0J-4PM"/>
+                            <constraint firstItem="FJ4-SM-65E" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Bbf-gv-jG5"/>
+                            <constraint firstItem="bUe-Xa-rqd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="BfD-ps-VXt"/>
+                            <constraint firstItem="FJ4-SM-65E" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="28" id="CDX-Za-ifX"/>
+                            <constraint firstItem="cXt-CF-W9Q" firstAttribute="top" secondItem="FJ4-SM-65E" secondAttribute="bottom" constant="20" id="Hb5-RK-3wF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bUe-Xa-rqd" secondAttribute="trailing" constant="40" id="YHi-MQ-rSZ"/>
+                            <constraint firstItem="bUe-Xa-rqd" firstAttribute="top" secondItem="cXt-CF-W9Q" secondAttribute="bottom" constant="24" id="YkP-HK-xZA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cXt-CF-W9Q" secondAttribute="trailing" constant="40" id="ghy-KA-F8z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FJ4-SM-65E" secondAttribute="trailing" constant="40" id="nsE-88-FuR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="書き込み" id="Ozq-a0-hAT"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Lce-wf-O88" id="fR1-R1-6Sb"/>
+                        <outlet property="writeButton" destination="bUe-Xa-rqd" id="OLS-bO-lOj"/>
+                        <outletCollection property="datePickers" destination="6W1-K7-oDA" collectionClass="NSMutableArray" id="MzH-k7-F7e"/>
+                        <outletCollection property="datePickers" destination="oQe-8c-Pur" collectionClass="NSMutableArray" id="yG6-uc-XNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--書き込み-->
+        <scene sceneID="Fjp-QI-BTp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NmB-bB-HhG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="書き込み" image="square.and.pencil" catalog="system" id="8GG-9D-bA2"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="GrT-XV-BXe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="v8A-ZA-zzQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtW-4n-7P6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <namedColor name="blue4044FC">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

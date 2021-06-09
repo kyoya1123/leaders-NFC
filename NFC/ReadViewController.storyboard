@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="emb-kl-Aeg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansJP-Bold.otf">
+            <string>NotoSansJP-Bold</string>
+        </array>
+        <array key="NotoSansJP-Medium.otf">
+            <string>NotoSansJP-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--トマト-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ReadViewController" customModule="NFC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="025-ep-ClQ">
+                                <rect key="frame" x="24" y="156" width="366" height="633"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ImW-DG-vjw">
+                                        <rect key="frame" x="12" y="12" width="342" height="275"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zUh-iP-V5f">
+                                        <rect key="frame" x="58" y="305" width="250" height="58"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VM5-gY-U8q">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-9m-4s8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/05/21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt7-Ud-Nti">
+                                                        <rect key="frame" x="0.0" y="31.5" width="125" height="26.5"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" id="qgY-zO-A1F">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="58"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvr-oe-ezN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/05/21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txT-kr-2hx">
+                                                        <rect key="frame" x="0.0" y="31.5" width="125" height="26.5"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <viewLayoutGuide key="safeArea" id="Ebx-Ea-q7S"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="IHO-P4-Bqz"/>
+                                            <constraint firstAttribute="width" constant="250" id="z71-m8-cxn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3C0-T1-BgL">
+                                        <rect key="frame" x="16" y="381" width="334" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eFt-rW-9OH">
+                                        <rect key="frame" x="16" y="489" width="334" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fO-yr-Lih">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="56"/>
+                                                <color key="backgroundColor" red="0.25098040699958801" green="0.26666668057441711" blue="0.9882352352142334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="WRs-IK-K7c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP" pointSize="16"/>
+                                                <state key="normal" title="買い物リストに追加">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPq-6R-wRE">
+                                                <rect key="frame" x="0.0" y="72" width="334" height="56"/>
+                                                <color key="backgroundColor" red="0.95076411962509155" green="0.31832133989902928" blue="0.42048918710983707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="uMv-gi-4ws"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP" pointSize="16"/>
+                                                <state key="normal" title="削除">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3C0-T1-BgL" firstAttribute="top" secondItem="zUh-iP-V5f" secondAttribute="bottom" constant="18" id="657-VM-WMO"/>
+                                    <constraint firstItem="eFt-rW-9OH" firstAttribute="top" secondItem="3C0-T1-BgL" secondAttribute="bottom" constant="20" id="9Pe-Wd-b9y"/>
+                                    <constraint firstItem="zUh-iP-V5f" firstAttribute="centerX" secondItem="025-ep-ClQ" secondAttribute="centerX" id="AtD-oD-3uB"/>
+                                    <constraint firstAttribute="trailing" secondItem="3C0-T1-BgL" secondAttribute="trailing" constant="16" id="Guq-rW-o4a"/>
+                                    <constraint firstAttribute="bottom" secondItem="eFt-rW-9OH" secondAttribute="bottom" constant="16" id="LRy-O0-y4L"/>
+                                    <constraint firstItem="ImW-DG-vjw" firstAttribute="top" secondItem="025-ep-ClQ" secondAttribute="top" constant="12" id="UiN-wJ-cmV"/>
+                                    <constraint firstItem="3C0-T1-BgL" firstAttribute="leading" secondItem="025-ep-ClQ" secondAttribute="leading" constant="16" id="YFY-nQ-QRc"/>
+                                    <constraint firstItem="eFt-rW-9OH" firstAttribute="leading" secondItem="025-ep-ClQ" secondAttribute="leading" constant="16" id="eBD-oY-rUj"/>
+                                    <constraint firstItem="zUh-iP-V5f" firstAttribute="top" secondItem="ImW-DG-vjw" secondAttribute="bottom" constant="18" id="g2r-Vm-NUc"/>
+                                    <constraint firstItem="ImW-DG-vjw" firstAttribute="leading" secondItem="025-ep-ClQ" secondAttribute="leading" constant="12" id="iIT-Q1-t2R"/>
+                                    <constraint firstAttribute="trailing" secondItem="eFt-rW-9OH" secondAttribute="trailing" constant="16" id="kqU-mH-M7H"/>
+                                    <constraint firstAttribute="trailing" secondItem="ImW-DG-vjw" secondAttribute="trailing" constant="12" id="nXX-gG-2vW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="025-ep-ClQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="1VZ-C9-8oj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="025-ep-ClQ" secondAttribute="bottom" constant="24" id="faW-nX-e18"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="025-ep-ClQ" secondAttribute="trailing" constant="24" id="klC-oY-iGa"/>
+                            <constraint firstItem="025-ep-ClQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="wYD-Xq-zwh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="トマト" id="ejH-wU-CqA"/>
+                    <connections>
+                        <outlet property="buyDateLabel" destination="Pt7-Ud-Nti" id="K7F-fZ-fKF"/>
+                        <outlet property="expirationDateLabel" destination="txT-kr-2hx" id="dg8-dy-q4b"/>
+                        <outlet property="ingridientImage" destination="ImW-DG-vjw" id="cQY-kc-M7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--読み取り-->
+        <scene sceneID="hCX-x3-rHz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="emb-kl-Aeg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="読み取り" image="doc.text.magnifyingglass" catalog="system" id="cHL-tD-9Rj"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="A7f-Ig-0ZV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ctp-b8-oZu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPQ-JU-gmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.magnifyingglass" catalog="system" width="113" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
