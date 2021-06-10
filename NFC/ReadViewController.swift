@@ -1,5 +1,6 @@
 import UIKit
 import CoreNFC
+import AlamofireImage
 
 class ReadViewController: UIViewController {
     
@@ -15,7 +16,6 @@ class ReadViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         read()
     }
-    
 
     @objc func read() {
         let session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
@@ -41,6 +41,11 @@ extension ReadViewController: NFCNDEFReaderSessionDelegate {
                         title = ingridientData.name
                         buyDateLabel.text = ingridientData.buyDate
                         expirationDateLabel.text = ingridientData.expirationDate
+                        FireStorageManager.getImageUrl(ingridientData.uuid) { url in
+                            if let url = url {
+                                ingridientImage.af.setImage(withURL: url)
+                            }
+                        }
                     }
             } else {
                 DispatchQueue.main.async {

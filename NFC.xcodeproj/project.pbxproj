@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772EA3512670961D001C8667 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772EA3502670961D001C8667 /* GoogleService-Info.plist */; };
+		772EA353267098E5001C8667 /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EA352267098E5001C8667 /* FireStoreManager.swift */; };
+		772EA3552670A9E8001C8667 /* FireStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EA3542670A9E8001C8667 /* FireStorageManager.swift */; };
+		772EA3582670B479001C8667 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 772EA3572670B479001C8667 /* AlamofireImage */; };
 		772F60EC2668D7A900F0ED6E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F60EB2668D7A900F0ED6E /* DateExtension.swift */; };
 		7772526B2659F97E006F5F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772526A2659F97E006F5F82 /* AppDelegate.swift */; };
 		7772526D2659F97E006F5F82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772526C2659F97E006F5F82 /* SceneDelegate.swift */; };
@@ -34,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		772EA3502670961D001C8667 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		772EA352267098E5001C8667 /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
+		772EA3542670A9E8001C8667 /* FireStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStorageManager.swift; sourceTree = "<group>"; };
 		772F60EB2668D7A900F0ED6E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		777252672659F97E006F5F82 /* NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7772526A2659F97E006F5F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 			files = (
 				777252802659FD18006F5F82 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				777252862659FD18006F5F82 /* FirebaseFirestore in Frameworks */,
+				772EA3582670B479001C8667 /* AlamofireImage in Frameworks */,
 				777252822659FD18006F5F82 /* FirebaseStorage in Frameworks */,
 				777252842659FD18006F5F82 /* FirebaseStorageSwift-Beta in Frameworks */,
 			);
@@ -77,6 +85,7 @@
 		7772525E2659F97E006F5F82 = {
 			isa = PBXGroup;
 			children = (
+				772EA3502670961D001C8667 /* GoogleService-Info.plist */,
 				777252692659F97E006F5F82 /* NFC */,
 				777252682659F97E006F5F82 /* Products */,
 			);
@@ -130,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				779C9D692667D8400025D41A /* IngridientData.swift */,
+				772EA352267098E5001C8667 /* FireStoreManager.swift */,
+				772EA3542670A9E8001C8667 /* FireStorageManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 				777252812659FD18006F5F82 /* FirebaseStorage */,
 				777252832659FD18006F5F82 /* FirebaseStorageSwift-Beta */,
 				777252852659FD18006F5F82 /* FirebaseFirestore */,
+				772EA3572670B479001C8667 /* AlamofireImage */,
 			);
 			productName = NFC;
 			productReference = 777252672659F97E006F5F82 /* NFC.app */;
@@ -194,6 +206,7 @@
 			mainGroup = 7772525E2659F97E006F5F82;
 			packageReferences = (
 				7772527E2659FD18006F5F82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				772EA3562670B479001C8667 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 777252682659F97E006F5F82 /* Products */;
 			projectDirPath = "";
@@ -213,6 +226,7 @@
 				779C9D632667D3AB0025D41A /* NotoSansJP-Regular.otf in Resources */,
 				779C9D642667D3AB0025D41A /* NotoSansJP-Medium.otf in Resources */,
 				779C9D672667D3AB0025D41A /* NotoSansJP-Bold.otf in Resources */,
+				772EA3512670961D001C8667 /* GoogleService-Info.plist in Resources */,
 				777252772659F980006F5F82 /* LaunchScreen.storyboard in Resources */,
 				779C9D662667D3AB0025D41A /* NotoSansJP-Thin.otf in Resources */,
 				779C9D652667D3AB0025D41A /* NotoSansJP-Light.otf in Resources */,
@@ -234,9 +248,11 @@
 				7772526B2659F97E006F5F82 /* AppDelegate.swift in Sources */,
 				772F60EC2668D7A900F0ED6E /* DateExtension.swift in Sources */,
 				7772526D2659F97E006F5F82 /* SceneDelegate.swift in Sources */,
+				772EA353267098E5001C8667 /* FireStoreManager.swift in Sources */,
 				779C9D532667C8BC0025D41A /* WriteViewController.swift in Sources */,
 				779C9D4F2667C8A60025D41A /* ListViewController.swift in Sources */,
 				779C9D6C2667DB550025D41A /* UIViewExtension.swift in Sources */,
+				772EA3552670A9E8001C8667 /* FireStorageManager.swift in Sources */,
 				779C9D6A2667D8400025D41A /* IngridientData.swift in Sources */,
 				779C9D592667C8D50025D41A /* ReadViewController.swift in Sources */,
 			);
@@ -440,6 +456,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		772EA3562670B479001C8667 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
 		7772527E2659FD18006F5F82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -451,6 +475,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		772EA3572670B479001C8667 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 772EA3562670B479001C8667 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		7772527F2659FD18006F5F82 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7772527E2659FD18006F5F82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

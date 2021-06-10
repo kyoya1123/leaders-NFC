@@ -6,13 +6,17 @@ class WriteViewController: UIViewController {
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var datePickers: [UIDatePicker]!
+    @IBOutlet var memoTextView: UITextView!
+    @IBOutlet var imageButton: UIButton!
     @IBOutlet var writeButton: UIButton!
     
     var ingridientData = IngridientData(name: "", buyDate: Date().dateString, expirationDate: Date().dateString)
-
+    var ingridientImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
+        setupTextView()
         setupButton()
         setupDatePicker()
     }
@@ -23,6 +27,10 @@ class WriteViewController: UIViewController {
     
     func setupTextField() {
         nameTextField.delegate = self
+    }
+    
+    func setupTextView() {
+        memoTextView.rounded(10)
     }
     
     func setupDatePicker() {
@@ -44,8 +52,18 @@ class WriteViewController: UIViewController {
     }
     
     func setupButton() {
+        imageButton.rounded(10)
+        imageButton.addTarget(self, action: #selector(didTapImage), for: .touchUpInside)
         writeButton.rounded()
         writeButton.addTarget(self, action: #selector(didTapWrite), for: .touchUpInside)
+    }
+    
+    @objc func didTapImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
     }
     
     @objc func didTapWrite() {
@@ -56,7 +74,6 @@ class WriteViewController: UIViewController {
 }
 
 extension WriteViewController: UITextFieldDelegate {
-     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -65,6 +82,19 @@ extension WriteViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
         ingridientData.name = text
+    }
+}
+
+extension WriteViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+        ingridientImage = image
+        imageButton.setImage(nil, for: .normal)
+        imageButton.setBackgroundImage(image, for: .normal)
     }
 }
 
@@ -99,20 +129,21 @@ extension WriteViewController: NFCNDEFReaderSessionDelegate {
                 case .readOnly:     session.invalidate(errorMessage: "Tag is only readable.")
                 case .readWrite:
                     guard let encodedData = try? JSONEncoder().encode(self.ingridientData) else { return }
-                        guard let tmpTextPayload = NFCNDEFPayload.wellKnownTypeTextPayload(string: "", locale: Locale(identifier: "en")) else { return }
-                        guard let textPayload = NFCNDEFPayload.wellKnownTypeTextPayload(string: String(data: encodedData, encoding: .utf8)!, locale: Locale(identifier: "en")) else { return }
-                        let message = NFCNDEFMessage(records: [tmpTextPayload, textPayload])
-                        currentTag.writeNDEF(message) { error in
-                            if error != nil {
-                                print(error?.localizedDescription ?? "No Data")
-                                session.invalidate(errorMessage: NSLocalizedString("fail", comment: ""))
-                            } else {
-                                session.alertMessage = NSLocalizedString("complete", comment: "")
-//                                FirebaseManager.postTagID(self.tagID)
-//                                UserDefaultManager.saveAnimalData(self.tagID, animalData)
+                    guard let tmpTextPayload = NFCNDEFPayload.wellKnownTypeTextPayload(string: "", locale: Locale(identifier: "en")) else { return }
+                    guard let textPayload = NFCNDEFPayload.wellKnownTypeTextPayload(string: String(data: encodedData, encoding: .utf8)!, locale: Locale(identifier: "en")) else { return }
+                    let message = NFCNDEFMessage(records: [tmpTextPayload, textPayload])
+                    currentTag.writeNDEF(message) { error in
+                        if error != nil {
+                            print(error?.localizedDescription ?? "No Data")
+                            session.invalidate(errorMessage: NSLocalizedString("fail", comment: ""))
+                        } else {
+                            session.alertMessage = NSLocalizedString("complete", comment: "")
+                            FireStorageManager.postImage(self.ingridientImage, self.ingridientData.uuid) { url in
+                                print(url)
                             }
-                            session.invalidate()
                         }
+                        session.invalidate()
+                    }
                 @unknown default:   session.invalidate(errorMessage: "Unknown status of tag.")
                 }
             }
