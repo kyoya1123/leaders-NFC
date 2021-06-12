@@ -6,5 +6,6 @@ struct IngridientData: Codable {
     var name: String = ""
     var buyDate: String = ""
     var expirationDate: String = ""
+    var memoText: String = ""
     var imageUrl: URL?
 }

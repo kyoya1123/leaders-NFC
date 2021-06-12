@@ -21,7 +21,7 @@ class WriteViewController: UIViewController {
         setupDatePicker()
     }
     
-    override func touchesEstimatedPropertiesUpdated(_ touches: Set<UITouch>) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
@@ -31,6 +31,7 @@ class WriteViewController: UIViewController {
     
     func setupTextView() {
         memoTextView.rounded(10)
+        memoTextView.delegate = self
     }
     
     func setupDatePicker() {
@@ -70,6 +71,13 @@ class WriteViewController: UIViewController {
         let session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
         session.alertMessage = NSLocalizedString("alertMessage", comment: "")
         session.begin()
+    }
+}
+
+extension WriteViewController: UITextViewDelegate {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        ingridientData.memoText = textView.text
+        return true
     }
 }
 

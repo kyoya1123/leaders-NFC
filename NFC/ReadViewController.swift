@@ -3,11 +3,11 @@ import CoreNFC
 import AlamofireImage
 
 class ReadViewController: UIViewController {
-    
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ingridientImage: UIImageView!
     @IBOutlet var buyDateLabel: UILabel!
     @IBOutlet var expirationDateLabel: UILabel!
-    
+    @IBOutlet var memoTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,28 +32,19 @@ extension ReadViewController: NFCNDEFReaderSessionDelegate {
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         if messages[0].records.isEmpty
         {
-            DispatchQueue.main.async {
-//                UIAlertController(NSLocalizedString("empty", comment: "")).show()
-            }
         } else {
             if let data = messages[0].records[1].wellKnownTypeTextPayload().0?.data(using: .utf8), let ingridientData = try? JSONDecoder().decode(IngridientData.self, from: data) {
                     DispatchQueue.main.async { [self] in
-                        title = ingridientData.name
+                        nameLabel.text = ingridientData.name
                         buyDateLabel.text = ingridientData.buyDate
                         expirationDateLabel.text = ingridientData.expirationDate
+                        memoTextView.text = ingridientData.memoText
                         FireStorageManager.getImageUrl(ingridientData.uuid) { url in
                             if let url = url {
                                 ingridientImage.af.setImage(withURL: url)
                             }
                         }
                     }
-            } else {
-                DispatchQueue.main.async {
-//                    UIAlertController(NSLocalizedString("readingError", comment: "")).show()
-//                    self.formView.subviews.forEach {
-//                        $0.removeFromSuperview()
-//                    }
-                }
             }
         }
     }
