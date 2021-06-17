@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		772EA3512670961D001C8667 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772EA3502670961D001C8667 /* GoogleService-Info.plist */; };
-		772EA353267098E5001C8667 /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EA352267098E5001C8667 /* FireStoreManager.swift */; };
 		772EA3552670A9E8001C8667 /* FireStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772EA3542670A9E8001C8667 /* FireStorageManager.swift */; };
 		772EA3582670B479001C8667 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 772EA3572670B479001C8667 /* AlamofireImage */; };
 		772F60EC2668D7A900F0ED6E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F60EB2668D7A900F0ED6E /* DateExtension.swift */; };
@@ -35,11 +34,17 @@
 		779C9D682667D3AB0025D41A /* NotoSansJP-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779C9D622667D3AB0025D41A /* NotoSansJP-Black.otf */; };
 		779C9D6A2667D8400025D41A /* IngridientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C9D692667D8400025D41A /* IngridientData.swift */; };
 		779C9D6C2667DB550025D41A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779C9D6B2667DB550025D41A /* UIViewExtension.swift */; };
+		77A2A7952679E14A00F25821 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A2A7942679E14A00F25821 /* UserDefaultManager.swift */; };
+		77A2A7972679E68700F25821 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A2A7962679E68700F25821 /* ArrayExtension.swift */; };
+		77F0516D267597C400919846 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F0516B267597C400919846 /* ListTableViewCell.swift */; };
+		77F0516E267597C400919846 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F0516C267597C400919846 /* ListTableViewCell.xib */; };
+		77F051762675CBA500919846 /* UIAlertActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F051732675CBA500919846 /* UIAlertActionExtension.swift */; };
+		77F051772675CBA500919846 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F051742675CBA500919846 /* UIAlertControllerExtension.swift */; };
+		77F051782675CBA500919846 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F051752675CBA500919846 /* UIApplicationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		772EA3502670961D001C8667 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		772EA352267098E5001C8667 /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
 		772EA3542670A9E8001C8667 /* FireStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStorageManager.swift; sourceTree = "<group>"; };
 		772F60EB2668D7A900F0ED6E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		777252672659F97E006F5F82 /* NFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +69,13 @@
 		779C9D692667D8400025D41A /* IngridientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientData.swift; sourceTree = "<group>"; };
 		779C9D6B2667DB550025D41A /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		779C9D6F26680B470025D41A /* NFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFC.entitlements; sourceTree = "<group>"; };
+		77A2A7942679E14A00F25821 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		77A2A7962679E68700F25821 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		77F0516B267597C400919846 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		77F0516C267597C400919846 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		77F051732675CBA500919846 /* UIAlertActionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtension.swift; sourceTree = "<group>"; };
+		77F051742675CBA500919846 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		77F051752675CBA500919846 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,8 @@
 				7772526C2659F97E006F5F82 /* SceneDelegate.swift */,
 				779C9D4E2667C8A60025D41A /* ListViewController.swift */,
 				779C9D502667C8AF0025D41A /* ListViewController.storyboard */,
+				77F0516B267597C400919846 /* ListTableViewCell.swift */,
+				77F0516C267597C400919846 /* ListTableViewCell.xib */,
 				779C9D522667C8BC0025D41A /* WriteViewController.swift */,
 				779C9D562667C8CC0025D41A /* WriteViewController.storyboard */,
 				779C9D582667C8D50025D41A /* ReadViewController.swift */,
@@ -139,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				779C9D692667D8400025D41A /* IngridientData.swift */,
-				772EA352267098E5001C8667 /* FireStoreManager.swift */,
 				772EA3542670A9E8001C8667 /* FireStorageManager.swift */,
 			);
 			path = Model;
@@ -150,6 +163,11 @@
 			children = (
 				779C9D6B2667DB550025D41A /* UIViewExtension.swift */,
 				772F60EB2668D7A900F0ED6E /* DateExtension.swift */,
+				77F051732675CBA500919846 /* UIAlertActionExtension.swift */,
+				77F051742675CBA500919846 /* UIAlertControllerExtension.swift */,
+				77F051752675CBA500919846 /* UIApplicationExtension.swift */,
+				77A2A7942679E14A00F25821 /* UserDefaultManager.swift */,
+				77A2A7962679E68700F25821 /* ArrayExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -235,6 +253,7 @@
 				779C9D4D2667C7AC0025D41A /* TabBarController.storyboard in Resources */,
 				779C9D512667C8AF0025D41A /* ListViewController.storyboard in Resources */,
 				779C9D5B2667C8DD0025D41A /* ReadViewController.storyboard in Resources */,
+				77F0516E267597C400919846 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,15 +264,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A2A7972679E68700F25821 /* ArrayExtension.swift in Sources */,
+				77F0516D267597C400919846 /* ListTableViewCell.swift in Sources */,
 				7772526B2659F97E006F5F82 /* AppDelegate.swift in Sources */,
+				77F051772675CBA500919846 /* UIAlertControllerExtension.swift in Sources */,
 				772F60EC2668D7A900F0ED6E /* DateExtension.swift in Sources */,
 				7772526D2659F97E006F5F82 /* SceneDelegate.swift in Sources */,
-				772EA353267098E5001C8667 /* FireStoreManager.swift in Sources */,
+				77F051762675CBA500919846 /* UIAlertActionExtension.swift in Sources */,
+				77A2A7952679E14A00F25821 /* UserDefaultManager.swift in Sources */,
 				779C9D532667C8BC0025D41A /* WriteViewController.swift in Sources */,
 				779C9D4F2667C8A60025D41A /* ListViewController.swift in Sources */,
 				779C9D6C2667DB550025D41A /* UIViewExtension.swift in Sources */,
 				772EA3552670A9E8001C8667 /* FireStorageManager.swift in Sources */,
 				779C9D6A2667D8400025D41A /* IngridientData.swift in Sources */,
+				77F051782675CBA500919846 /* UIApplicationExtension.swift in Sources */,
 				779C9D592667C8D50025D41A /* ReadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NFC/NFC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 3X7LEN654Y;
 				INFOPLIST_FILE = NFC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -417,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NFC/NFC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 3X7LEN654Y;
 				INFOPLIST_FILE = NFC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

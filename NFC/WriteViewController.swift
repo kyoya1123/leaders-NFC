@@ -69,7 +69,7 @@ class WriteViewController: UIViewController {
     
     @objc func didTapWrite() {
         let session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
-        session.alertMessage = NSLocalizedString("alertMessage", comment: "")
+        session.alertMessage = "タグに近づけてください"
         session.begin()
     }
 }
@@ -122,7 +122,7 @@ extension WriteViewController: NFCNDEFReaderSessionDelegate {
             return
         }
         let currentTag = tags.first!
-        session.connect(to: currentTag) { error in
+        session.connect(to: currentTag) { [self] error in
             guard error == nil else {
                 session.invalidate(errorMessage: "Could not connect to tag.")
                 return
@@ -136,7 +136,7 @@ extension WriteViewController: NFCNDEFReaderSessionDelegate {
                 case .notSupported: session.invalidate(errorMessage: "Tag is not supported.")
                 case .readOnly:     session.invalidate(errorMessage: "Tag is only readable.")
                 case .readWrite:
-                    guard let encodedData = try? JSONEncoder().encode(self.ingridientData) else { return }
+                    guard let encodedData = try? JSONEncoder().encode(ingridientData) else { return }
                     guard let tmpTextPayload = NFCNDEFPayload.wellKnownTypeTextPayload(string: "", locale: Locale(identifier: "en")) else { return }
                     guard let textPayload = NFCNDEFPayload.wellKnownTypeTextPayload(string: String(data: encodedData, encoding: .utf8)!, locale: Locale(identifier: "en")) else { return }
                     let message = NFCNDEFMessage(records: [tmpTextPayload, textPayload])
@@ -146,9 +146,8 @@ extension WriteViewController: NFCNDEFReaderSessionDelegate {
                             session.invalidate(errorMessage: NSLocalizedString("fail", comment: ""))
                         } else {
                             session.alertMessage = NSLocalizedString("complete", comment: "")
-                            FireStorageManager.postImage(self.ingridientImage, self.ingridientData.uuid) { url in
-                                print(url)
-                            }
+                            UserDefaultsManager.updateIngridientData(ingridientData)
+                            FireStorageManager.postImage(ingridientImage, ingridientData.uuid)
                         }
                         session.invalidate()
                     }

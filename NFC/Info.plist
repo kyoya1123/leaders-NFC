@@ -21,7 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NFCReaderUsageDescription</key>
-	<string>te</string>
+	<string>タグのスキャンに使用します</string>
+	<key>NSCameraUsageDescription</key>
+	<string>材料を撮影し保存します</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>リマインダーに追加します</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -64,7 +68,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-	<key>NSCameraUsageDescription</key>
-	<string>for image</string>
 </dict>
 </plist>

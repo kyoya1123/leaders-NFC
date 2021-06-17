@@ -8,21 +8,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--食材リスト-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ListViewController" customModule="NFC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ucf-l4-zQO">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ucf-l4-zQO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Ih-t0-cIx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ucf-l4-zQO" secondAttribute="trailing" id="Cyn-JB-bK6"/>
+                            <constraint firstItem="ucf-l4-zQO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="myP-G4-2Ed"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ucf-l4-zQO" secondAttribute="bottom" id="ogb-2i-nbG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PV7-px-2Uo"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="uvw-Xn-oX2"/>
+                    <navigationItem key="navigationItem" title="食材リスト" id="PV7-px-2Uo"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="listTableView" destination="ucf-l4-zQO" id="GTR-Ia-sUj"/>
+                        <segue destination="6dk-qK-qyW" kind="presentation" identifier="ReadViewController" id="U1z-Lb-W3Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--ReadViewController-->
+        <scene sceneID="Fs9-rT-uAW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ReadViewController" id="6dk-qK-qyW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="y9x-gG-3ne"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ba-L2-4cW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="116"/>
         </scene>
         <!--リスト-->
         <scene sceneID="x8P-Gz-gIN">
@@ -31,8 +59,8 @@
                     <tabBarItem key="tabBarItem" title="リスト" image="list.dash" catalog="system" id="mMM-qm-8Lv"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4jQ-yX-IPi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4jQ-yX-IPi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
